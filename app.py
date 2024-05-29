@@ -15,7 +15,7 @@ threadid = client.beta.threads.create().id
 
 maincontainer = ps.get_userflow_setup()
 with maincontainer:
-    chatcontainer = st.container(height=400, border=False)
+    chatcontainer = st.container(height=200, border=False)
     with chatcontainer:
         for msg in st.session_state.messages:
             with st.chat_message(msg['role']):
