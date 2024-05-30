@@ -13,6 +13,7 @@ threadid = client.beta.threads.create().id
 
 
 
+
 maincontainer = ps.get_userflow_setup()
 with maincontainer:
     chatcontainer = st.container(height=200, border=False)
@@ -30,6 +31,8 @@ with promptcontainer:
                 st.markdown(prompt)
             message = client.beta.threads.messages.create(thread_id=threadid, role="user", content=prompt)
             run = client.beta.threads.runs.create(thread_id=threadid, assistant_id=assistantid, additional_instructions="Do NOT use any tools of type functions for this run.")
+
+            status = None
             status = st.status(label="Running assistant", expanded=False, state="running")
             with status:
                 st.markdown(f"Initializing run {run.id} and message {message.id}")
@@ -50,5 +53,5 @@ with promptcontainer:
                     
         
         
-
+othercontainer = st.container(border=False, height=50)
 
