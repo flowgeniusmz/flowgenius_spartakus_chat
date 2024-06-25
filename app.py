@@ -12,7 +12,7 @@ assistantid = st.secrets.openai.assistant_id
 threadid = client.beta.threads.create().id
 
 
-st.write("HELLO WORLD")
+
 
 maincontainer = ps.get_userflow_setup()
 with maincontainer:
