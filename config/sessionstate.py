@@ -25,7 +25,7 @@ def initialize_session_state():
         st.session_state.userflow_authenticated = False
         st.session_state.userflow_submitted = False
         st.session_state.userdata = None
-        st.session_state.messages = [{"role": "assistant", "content": "Welcome to SpartakusAI! I am Sparty - how may I help you today?"}]
+        st.session_state.messages = [{"role": "assistant", "content": "Welcome to SpartakusAI! Are you here to buy insurance?"}]
         st.session_state.threadmessages = None
         st.session_state.f36 = False
         st.session_state.f125 = False
@@ -35,6 +35,10 @@ def initialize_session_state():
         st.session_state.f133 = False
         st.session_state.f137 = False
         st.session_state.f140 = False
+        st.s1 = "Yes I would like to buy insurance"
+        st.session_state.s2 = "I would like to learn more about SpartakusAI"
+        st.session_state.s3 = "I would like contact information."
+        st.session_state.s4 = ""
         
         
 def sessionstate_controller():
