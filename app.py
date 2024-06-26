@@ -31,7 +31,7 @@ with promptcontainer:
         with chatcontainer:
             with st.chat_message("user"):
                 st.markdown(prompt)
-            st.toast("Initializing")
+            
             message = client.beta.threads.messages.create(thread_id=threadid, role="user", content=prompt)
             run = client.beta.threads.runs.create(thread_id=threadid, assistant_id=assistantid, additional_instructions="Do NOT use any tools of type functions for this run.")
 
@@ -47,7 +47,7 @@ with promptcontainer:
                 run = client.beta.threads.runs.retrieve(run_id=run.id, thread_id=threadid)
                 if run.status == "completed":
                     st.toast("Completed!")
-                    status.update(label="assistant complete", expanded=False, state="complete")
+                    status.update(label="Completed!", expanded=False, state="complete")
                     threadmessages = client.beta.threads.messages.list(thread_id=threadid)
                     for threadmessage in threadmessages:
                         if threadmessage.role == "assistant" and threadmessage.run_id == run.id:
