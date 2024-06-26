@@ -11,9 +11,9 @@ import datetime
 from typing import Literal
 import pandas as pd
 import asyncio
-from classes import clsSessionState as ss
 
-sessionstate = ss.SessionState.get()
+
+
 ##### SET CLIENTS
 oaiClient = openai_client(api_key=st.secrets.openai.api_key)
 supaClient = supabase_client(supabase_key=st.secrets.supabase.api_key_admin, supabase_url=st.secrets.supabase.url)
