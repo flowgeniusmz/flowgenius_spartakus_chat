@@ -22,7 +22,7 @@ googClient = google_client(key=st.secrets.google.maps_api_key)
 tavClient = tavily_client(api_key=st.secrets.tavily.api_key)
 
 ##### SET VARIABLES
-assistantid = st.session_state.assistantid
+assistantid = st.secrets.openai.assistant_id
 threadid = st.session_state.threadid
 
 
