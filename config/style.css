@@ -2,7 +2,7 @@
 
 html, body, div, p, [class*="css"] {
     font-family: 'Roboto', kode mono; 
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #717da3;
 }
