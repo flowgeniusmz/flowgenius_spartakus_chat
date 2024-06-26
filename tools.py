@@ -23,7 +23,7 @@ tavClient = tavily_client(api_key=st.secrets.tavily.api_key)
 
 ##### SET VARIABLES
 assistantid = st.secrets.openai.assistant_id
-threadid = st.session_state.threadid
+threadid = st.secrets.openai.thread_id
 
 
 
