@@ -9,4 +9,4 @@ textColor="#000000"
 backgroundColor = "#FFFFFF"
 
 [client]
-showSidebarNavigation = false
+showSidebarNavigation = true
